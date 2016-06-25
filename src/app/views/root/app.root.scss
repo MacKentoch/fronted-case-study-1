@@ -1,0 +1,57 @@
+body {
+	background-color: transparent;;
+}
+
+/********************
+	ui-view animations
+********************/
+
+[ui-view].ng-enter{
+	animation: bounceInRight 0.7s both ease-in;
+	z-index: 9999;
+}
+
+[ui-view].ng-leave {
+	opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+	opacity: 0;
+}
+
+
+@-webkit-keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+    }
+    60% {
+        opacity: 0.6;
+        -webkit-transform: translateX(-30px);
+    }
+    80% {
+		opacity: 1;
+        -webkit-transform: translateX(10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    60% {
+         opacity: 0.6;
+        transform: translateX(-30px);
+    }
+    80% {
+		opacity: 1;
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

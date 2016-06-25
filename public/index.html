@@ -1,0 +1,36 @@
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>angularjs-bs-starter</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="an angular material quizz">
+		<meta name="author" content="Erwan DATIN">
+		<base href="/">
+    <style type="text/css">
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+	</head>
+	<body
+    ng-controller="rootController"
+    ng-cloak>
+
+    <navbar-component></navbar-component>
+
+    <div class="container-fluid">
+      <div class="container contentPage">
+        <div class="ui-view-container">
+          <div ui-view></div>
+        </div>
+     </div>
+    </div>
+
+		<script
+      type="text/javascript"
+      src="js/app.bundle.js">
+    </script>
+	</body>
+</html>

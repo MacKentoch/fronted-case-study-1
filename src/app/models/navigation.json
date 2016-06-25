@@ -1,0 +1,20 @@
+{
+  "brand": "hydrane Frontend",
+  "leftMenu": [],
+  "rightMenu": [
+    {
+      "order": 0,
+      "name": "home",
+      "label": "Home",
+      "href": "/",
+      "uiSref": "home"
+    },
+    {
+      "order": 1,
+      "name": "about",
+      "label": "About",
+      "href": "/about",
+      "uiSref": "about"
+    }
+  ]
+}

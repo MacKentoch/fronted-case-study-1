@@ -1,0 +1,56 @@
+<jumbo-title
+  title-h1="homeCtrl.title"
+  go-click="homeCtrl.handlesGoClick()">
+</jumbo-title>
+
+<div class="row">
+  <div class="col-md-8">
+    <div ng-show="homeCtrl.showResults">
+      <table
+        ng-table="homeCtrl.tableParams"
+        show-filter="true"
+        class="table table-striped">
+        <tr ng-repeat="geodata in homeCtrl.tableData">
+          <td
+            data-title="continentName"
+            sortable="continentName"
+            filter="{'continentName': 'text'}">
+            {{ geodata.continentName }}
+          </td>
+          <td
+            data-title="countryName"
+            sortable="countryName"
+            filter="{'countryName': 'text'}">
+            {{ geodata.countryName }}
+          </td>
+          <td
+            data-title="areaInSqKm"
+            sortable="areaInSqKm"
+            filter="{'areaInSqKm': 'number'}">
+            {{ geodata.areaInSqKm }}
+          </td>
+          <td
+            data-title="population"
+            sortable="population"
+            filter="{'population': 'number'}">
+            {{ geodata.population }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <filter-form
+      is-fetching-data = "homeCtrl.isFetchingGeoData"
+      continents-names="homeCtrl.continentsNames"
+      continents-names-default-value="homeCtrl.continentsNamesDefaultValue"
+      selected-continent-name="homeCtrl.selectedContinentsNames"
+      metrics="homeCtrl.metrics"
+      metric-default-value="homeCtrl.metricDefaultValue"
+      selected-metric="homeCtrl.selectedMetrics"
+      chart-max-results="homeCtrl.chartMaxResult"
+      chart-max-result-default-value="homeCtrl.chartMaxResultDefaultValue"
+      selected-chart-max-result="homeCtrl.selectedChartMaxResult">
+    </filter-form>
+  </div>
+</div>
